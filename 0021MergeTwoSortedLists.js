@@ -1,3 +1,4 @@
+//doesn't work
 var mergeTwoLists = function(list1, list2) {
     
     for(x = 0; x < list2.length; x++){

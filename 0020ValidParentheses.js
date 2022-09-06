@@ -1,3 +1,4 @@
+//doesn't work
 var isValid = function(s) {
     s = s.split("")
     
