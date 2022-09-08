@@ -9,3 +9,5 @@ var mySqrt = function(x) {
 
 x = 1870;
 console.log(mySqrt(x));
+
+//completed
