@@ -40,3 +40,4 @@ var romanToInt = function(s) {
 
 var s = "MCMXCIV"
 console.log(romanToInt(s))
+//completed

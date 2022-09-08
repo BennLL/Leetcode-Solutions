@@ -20,3 +20,4 @@ var lengthOfLastWord = function(s) {
 s = "why yes   ";
 console.log(lengthOfLastWord(s));
 //works
+//completed
