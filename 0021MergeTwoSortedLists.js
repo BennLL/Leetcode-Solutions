@@ -27,4 +27,4 @@ Output: [0]
 
 list1 = [52,3,6], list2 = [6,7,1,2]
 */
-//completed
+//not completed
