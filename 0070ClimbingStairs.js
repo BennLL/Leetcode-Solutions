@@ -1,6 +1,12 @@
 var climbStairs = function(n) {
-    return n;
+    count = 0;
+    for(x = n; x > 0; x--){
+        
+    }
+    return count;
 };
 
 n = 3;
-console.log(n);
+console.log(climbStairs(n));
+
+// try permutation or combination
