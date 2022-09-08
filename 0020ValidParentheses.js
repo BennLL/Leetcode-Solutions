@@ -1,56 +1,35 @@
-//doesn't work
 var isValid = function(s) {
-    s = s.split("")
-    
-    console.log(s)
-    
-    let condition = true
-    if((s.length % 2) != 0){
-        return false
-    }
-    
-    for(x = 0; x < s.length; x++){
-        switch(s[x]){
-            case '(':
-                if(s[x+1] == ')'){
-                    condition = true
-                    x++
-                }
-                break;
-            case '[':
-                if(s[x+1] == ']'){
-                    condition = true
-                    x++
-                }
-                break;
-            case '{':
-                if(s[x+1] == '}'){
-                    condition = true
-                    x++
-                }
-                break;
-            default:
-                condition = false
-                break;
+    g = s.split("");
+    f = [];
+    console.log(g);
+
+    for(x = 0; x < g.length; x++){
+        if(g[x] == "("){
+            f.push(")");
         }
+        else if(g[x] == "["){
+            f.push("]");
+        }
+        else if(g[x] == "{"){
+            f.push("}");
+        }
+        else if (f.pop() != s[x]){
+            return false;
+        }
+        // else{
+        //     if(g[x] == f[f.length - 1]){
+        //         f.pop(f.length - 1);
+        //     }
+        // }
     }
-    return condition
+    console.log(f);
+    return f.length == 0;
+
 };
 
-var s = "{[]}"
-console.log(isValid(s))
+var s = "([}}])";
+console.log(isValid(s));
 
-/*
-Example 1:
+// "([}}])"
 
-Input: s = "()"
-Output: true
-Example 2:
-
-Input: s = "()[]{}"
-Output: true
-Example 3:
-
-Input: s = "(]"
-Output: false
-*/
+    
