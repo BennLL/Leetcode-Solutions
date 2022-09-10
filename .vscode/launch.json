@@ -7,7 +7,7 @@
         "request": "launch",
         "name": "Launch Program",
         "skipFiles": ["<node_internals>/**"],
-        "program": "${workspaceFolder}\\0070ClimbingStairs.js"
+        "program": "${workspaceFolder}\\0118Pascal'sTriangle.js"
       }
     ]
   }
