@@ -7,7 +7,7 @@
         "request": "launch",
         "name": "Launch Program",
         "skipFiles": ["<node_internals>/**"],
-        "program": "${workspaceFolder}\\0027RemoveElement.js"
+        "program": "${workspaceFolder}\\0035SearchInsertPosition.js"
       }
     ]
   }
