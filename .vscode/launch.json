@@ -7,7 +7,7 @@
         "request": "launch",
         "name": "Launch Program",
         "skipFiles": ["<node_internals>/**"],
-        "program": "${workspaceFolder}\\0268MissingNumber.js"
+        "program": "${workspaceFolder}\\0258AddDigits.js"
       }
     ]
   }
