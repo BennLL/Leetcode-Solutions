@@ -1,29 +1,43 @@
 var validPalindrome = function(s) {
+    size = s.length;
     s = s.split("");
-    temp = s.slice();
+    temp = [];
+    temp2 = copyArray(s);
 
-    for(s = 0; x = s.length; s++){
+    for(i = 0; i < size; i++){
+        console.log("original: " + s);
         tempchar = s[i];
-
         s.splice(i, 1);
-        temp.slice(i, 1);
-        temp.reverse();
+        console.log("spliced: " + s);
+
+        temp = copyArray(s);
+        console.log("copied and reversed: " + temp);
 
         if(s == temp){
             return true;
-        }else{
-            temp.reverse();
-            s.splice(i,0,tempchar);
-            temp.splice(i,0,tempchar);
         }
+
+        s = copyArray(temp2);
+        console.log("Added back: " + s);
+        console.log();
     }
 
     return false;
 };
 
+var copyArray = function(arr){
+    temp = [];
 
-s = "aba";
-console.log(validPalindrome(s));
+    for(i = 0; i < arr.length; i++){
+        temp[i] = arr[i];
+    }
+
+    temp = temp.reverse();
+    return temp;
+}
+
+s = "abc";
+console.log("end: " + validPalindrome(s));
 
 // Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 
