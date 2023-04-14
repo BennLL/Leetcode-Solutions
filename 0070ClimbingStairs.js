@@ -1,24 +1,15 @@
 var climbStairs = function(n) {
-    count = 0;
-    for(x = n; x > 0; x--){
-        
+    x = 1;
+    y = 1;
+    for(i = 0; i < n; i++){
+        temp = x + y;
+        x = y;
+        y = temp;
     }
-    return count;
+
+    return x;
 };
 
-n = 3;
+n = 4;
 console.log(climbStairs(n));
 
-// try permutation or combination
-// var isPalindrome = function(s) {
-//     x = s.replace(/[^A-Za-z0-9]/g, '');
-//     x = x.toLowerCase();
-//     y = x.split("").reverse().join("");
-//     if (x == y){
-//         return true
-//     }
-//     else{
-//         return false
-//     }
-//     return x;
-// };
