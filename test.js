@@ -23,6 +23,6 @@ var nextGreaterElement = function(nums1, nums2) {
     return ans;
 };
 
-// // console.log("answer: ", nextGreaterElement([2,1,3], [2,3,1])) //expected 3, -1, -1
+// /// console.log("answer: ", nextGreaterElement([2,1,3], [2,3,1])) //expected 3, -1, -1
 // // console.log("answer: ", nextGreaterElement([4,1,2], [1,3,4,2]))
 // console.log("answer: ", nextGreaterElement([3,1,5,7,9,2,6], [1,2,3,5,6,7,9,11])) // expected [5,2,6,9,11,3,7]
