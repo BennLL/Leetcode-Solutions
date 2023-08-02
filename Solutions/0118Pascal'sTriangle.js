@@ -3,11 +3,15 @@
  * @return {number[][]}
  */
 var generate = function(numRows) {
-    const arr = [][];
-    for(x = 1, x < numRows; x++){
-
+    ans = [];
+    for(i = 0; i < numRows; i++){
+        ans[i] = [];
+        ans[i][0] = 1;
+        for(x = 1; x < i; x++){
+            ans[i][x] = ans[i - 1][x - 1] + ans[i - 1][x];
+        }
+        ans[i][i] = 1;
     }
-};
 
-numRows = 5;
-console.log(generate(numRows));
+    return ans;
+};
