@@ -11,24 +11,22 @@
  * @param {number} n
  * @return {number}
  */
-var guessNumber = function(n) {
-    min = 1;
-    max = n;
-    while(min <= max){
-        mid = Math.floor((min + max)/2);
+var guessNumber = function (n) {
+    let start = 1;
+    let end = n;
+    let mid;
 
-        result = guess(mid);
+    while (start <= end) {
+        mid = Math.floor((start + end) / 2);
+        let result = guess(mid);
 
-        if(result == 0){
+        if (result == -1) {
+            end = mid - 1;
+        } else if (result == 1) {
+            start = mid + 1;
+        } else {
             return mid;
-        }else if(result == -1){
-            max = mid - 1;
-        }else{
-            min = mid + 1;
         }
-        console.log("guess: " + mid)
-        console.log("result: " + result)
-        console.log("min: " + min)
-        console.log("max: " + max)
     }
+
 };
