@@ -4,23 +4,8 @@
  * @return {number[]}
  */
 var intersection = function(nums1, nums2) {
-    nums1.sort(function(a,b){return a-b})
-    nums2.sort(function(a,b){return a-b})
-    same = []
-    n1 = 0;
-    n2 = 0;
-    while(n1 < nums1.length && n2 < nums2.length){
-        if(nums1[n1] == nums2[n2]){
-            same.push(nums1[n1]);
-            n1++;
-            n2++;
-        }else if(nums1[n1] < nums2[n2]){
-            n1++;
-        }else if(nums1[n1] > nums2[n2]){
-            n2++;
-        }
-    }
-    same = Array.from(new Set(same));
-    return same;
-};
+    var set1 = new Set(nums1);
+    var set2 = new Set(nums2);
 
+    return Array.from(set1).filter( num => set2.has(num));
+};

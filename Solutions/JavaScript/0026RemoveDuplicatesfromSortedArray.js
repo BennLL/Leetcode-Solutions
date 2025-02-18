@@ -3,21 +3,24 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    var numset = new Set();
-    x = 0;
+    num = new Set();
+    count = 0;
     for(i = 0; i < nums.length; i++){
-        numset.add(nums[i]);
+        if(!num.has(nums[i])){
+            num.add(nums[i]);
+            count++;
+        }else{
+            nums[i] = "_";
+        }
     }
-
-  
-    numset.forEach(element => {
-        nums[x] = element;
-        x++;
+    nums = nums.sort(function(a,b){
+        if(typeof a === 'number' && typeof b !== "number"){return -1};
+        if(typeof a !== 'number' && typeof b === "number"){return 1};
+        if(typeof a === 'number' && typeof b === "number"){return a-b};
+        return 0;
     });
-
     console.log(nums);
-    return numset.size;
+    return count;
 };
 
-var nums = [0,0,1,1,1,2,2,3,3,4];
-console.log(removeDuplicates(nums));
+//updated solution
